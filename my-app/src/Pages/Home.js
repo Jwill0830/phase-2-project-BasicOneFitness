@@ -1,6 +1,8 @@
-import react, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import coaches from "../data";
 import CoachesCard from "../components/CoachesCard";
+import NavBar from './NavBar';
+
 function Home() {
     const [coachesArray, setupCoachesArray] = useState([])
     useEffect (()=>{
@@ -8,14 +10,14 @@ function Home() {
         .then(res => res.json())
         .then(data => setupCoachesArray(data)) 
     }, [] )
-
-    const coachesList = coaches.map(coaches => {
-    return <CoachesCard key={coaches.name} specialty={coaches.specialty} bio={coaches.bio} rating={coaches.rating} availability={coaches.availability} ig={coaches.id}/>
-    });
-
+    const coachesList = coachesArray.map(coachObj => {
+        return <CoachesCard key={coachObj.name} coach={coachObj} />
+    })
     return (
         <>
-        <CoachesCard/>
+        <NavBar coaches= {coaches}/>
+        
+        {coachesList}
         <main>
             <h1> Home! </h1>
         </main>

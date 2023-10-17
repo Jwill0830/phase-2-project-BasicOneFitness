@@ -1,13 +1,13 @@
-function CoachesCard({coaches}) {
+function CoachesCard({coach}) {
     return (
         <article>
-            <h2>{coaches.name}</h2>
-            <h2>{coaches.specialty}</h2>
-            <h2>{coaches.bio}</h2>
-            <h2>{coaches.rating}</h2>
-            <h2>{coaches.availability}</h2>
-            <h2>{coaches.ig}</h2>
-            <h2>{coaches.image}</h2>
+            <h2>{coach.name}</h2>
+            <h2>{coach.specialty}</h2>
+            <h2>{coach.bio}</h2>
+            <h2>{coach.rating}</h2>
+            <h2>{coach.availability}</h2>
+            <h2>{coach.ig}</h2>
+            <h2>{coach.image}</h2>
         </article>
     )
 }

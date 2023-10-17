@@ -8,12 +8,12 @@ function Form(){
                 <h1>Become a Coach</h1>
                 <form>
                     <div>
-                        <label for="First Name">First Name:</label>
-                        <input id="First Name" type="text" name="FirstName" placeholder="Firstname"/>
+                        <label htmlFor="FirstName">First Name:</label>
+                        <input id="FirstName" type="text" name="FirstName" placeholder="Firstname"/>
                     </div>
                     <br/>
                     <div>
-                        <label for="lastname">Last Name:</label>
+                        <label htmlFor="lastname">Last Name:</label>
                         <input id="lastname" type="lastname" name="lastname" placeholder="LastName"/>
                     </div>
                     <br/>
